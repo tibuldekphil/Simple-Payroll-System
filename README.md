@@ -22,3 +22,6 @@ Export payslips to file
 
 This project is just for practice and learning.
 I’ll improve it step by step as I learn more.
+
+### 🗓️ **Day 1**
+> I ran into a roadblock — VS Code Spaces runs on Linux and can’t display Windows interfaces like Tkinter. I’ll continue coding locally and upload my progress later.
