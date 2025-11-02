@@ -46,3 +46,20 @@ git log
 
 ### 🗓️ **Week 1**
 > Hey, ugh~ its been a while. I survived one heck of a week. but i finally have a decent start on my Payroll GUI I forgot to make an update since I mainly worked on my code at school, bla bla bla~ anyway here it is...
+
+# Navigation Revamp
+
+### Problem
+> there's a risk of circular import between classes
+
+### Solution
+> I've thought of making a hamburger button to hold the buttons responsible for navigation or switching between pages.
+> Why? Since circular imports occur when classes import from each other at the same time, This solution will solve that by having all imports happen inside the main Class
+
+#### Steps:
+- Create a Hamburger button beside the header
+- Create a collapsible sidebar to access the buttons for navigation
+
+>That's it for now, lets see what happens...
+
+>Lol this is one messy README file
