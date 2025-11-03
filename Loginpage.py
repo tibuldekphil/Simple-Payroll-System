@@ -14,14 +14,13 @@ def create_login_page(container_Frame):
     page = tk.Frame(container_Frame, bg=BACKGROUND_MAIN)
     page.pack(expand=True, fill="both")
 
-    big_Text = tk.Label(
-        page,
-        text="Payroll System - Login",
-        fg=TEXT_LIGHT,
-        bg=BACKGROUND_MAIN,
-        font=("Segoe UI", 30)
+    big_Text = tk.Label(page,
+                        text="Payroll System - Login",
+                        fg=TEXT_LIGHT,
+                        bg=BACKGROUND_MAIN,
+                        font=("Segoe UI", 30)
     )
-    big_Text.pack(pady=20)
+    big_Text.pack(pady=(0,20))
 
     input_Frame = tk.Frame(page,
                            bg=BACKGROUND_FRAME,
@@ -52,15 +51,14 @@ def create_login_page(container_Frame):
     def toggle_pw():
         password_Entry.config(show="" if show_pw_var.get() else "*")
 
-    password_check = tk.Checkbutton(page,
+    password_check = tk.Checkbutton(input_Frame,
                               text="Show Password",
                               variable=show_pw_var,
-                              command=toggle_pw,
-                              bg=BACKGROUND_MAIN,
-                              fg=TEXT_LIGHT,
-                              activebackground=BACKGROUND_MAIN
+                              bg=BACKGROUND_FRAME,
+                              activebackground=BACKGROUND_FRAME,
+                              command=toggle_pw
                               )
-    password_check.pack()
+    password_check.grid(row=2, column=1, sticky="w")
 
     # Buttons
     btn_frame = tk.Frame(page, bg=BACKGROUND_MAIN)
@@ -88,8 +86,8 @@ def create_login_page(container_Frame):
     login_Button.grid(row=0, column=0, padx=10)
     add_hover_effect(login_Button)
 
-    sign_in_Button = tk.Button(btn_frame,
-                               text="Sign-in",
+    sign_up_Button = tk.Button(btn_frame,
+                               text="Sign-up",
                                bg=BTN_COLOR,
                                fg=TEXT_LIGHT,
                                font=("Segoe UI", 12),
@@ -97,8 +95,8 @@ def create_login_page(container_Frame):
                                padx=12,
                                pady=6
                                )
-    sign_in_Button.grid(row=0, column=1, padx=10)
-    add_hover_effect(sign_in_Button)
+    sign_up_Button.grid(row=0, column=1, padx=10)
+    add_hover_effect(sign_up_Button)
 
     from mMenu import show_main_menu
     # Back to main menu
